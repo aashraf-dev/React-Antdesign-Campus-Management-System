@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* light theme colors */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --success-color: #2c6e49;
+  --in-success-color: #f8f9fa;
+  --danger-color: #ef233c;
+  --in-danger-color: #f8f9fa;
+  --warning-color: #FFC107;
+  --in-warning-color: #f8f9fa;
+  --primary-color: #3F51B5;
+  --in-primary-color: #f8f9fa;
+  --disabled-color: #9E9E9E;
+  --in-disabled-color: #212529;
+}
+
+
+/* dark theme colors */
+[data-theme='dark'] {
+  --bg-color: #0d1321;
+  --text-color: #f8f9fa;
+  --success-color: #2c6e49;
+  --in-success-color: #f8f9fa;
+  --danger-color: #ef233c;
+  --in-danger-color: #f8f9fa;
+  --warning-color: #FFC107;
+  --in-warning-color: #f8f9fa;
+  --primary-color: #3F51B5;
+  --in-primary-color: #f8f9fa;
+  --disabled-color: #9E9E9E;
+  --in-disabled-color: #f8f9fa;
+}
+
+
+/* -------- FONT STYLES --------- */
+
+._404,
+h1,
+h2,
+h3,
+h4,
+p,
+.n1-note,
+.btn-bold {
+  font-family: 'Funnel Sans', sans-serif;
+}
+
+h5,
+h6,
+.subtitle,
+.n2-note,
+.btn-normal {
+  font-family: 'Giest', sans-serif;
+}
+
+._404 {
+  font-weight: bold;
+  font-size: 150px;
+  line-height: auto;
+  letter-spacing: -2%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: -2%;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: 0%;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+
+.n1-note {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+.n2-note {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--in-primary-color);
+  padding: 10px 20px;
+  outline: none !important;
+  border: none !important;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* -------------------------- TOP NAV STYLES --------------------------- */
+/* -------------------------------------------------------------------- */
+
+.nav-container {
+  padding: 16px;
+  width: 100%;
+}
+
+.topnav {
+  width: 100%;
+  border: none !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: start;
+  gap: 16px;
+  min-height: 64px;
+  font-family: 'Funnel Sans', sans-serif;
+  border-radius: 8px;
+}
+
+[data-theme='light'] .topnav {
+  box-shadow: 0px 3px 30px -5px rgba(63, 81, 181, 0.61);
+}
+
+[data-theme='dark'] .topnav {
+  box-shadow: 0px 3px 30px -5px rgba(141, 150, 194, 0.61);
+}
+
+.layout {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+.sidebar-container {
+  padding: 10px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* border: 1px solid red; */
+}
+
+.sidebar {
+  /* border-radius: 8px; */
+  box-shadow: 0px 3px 30px -5px rgba(141, 150, 194, 0.61);
+}
