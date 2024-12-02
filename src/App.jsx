@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider, useTheme } from './hooks/useTheme';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ScreenSizeProvider } from './hooks/useScreenSize';
 import { ConfigProvider } from 'antd';
 import { lightTheme, darkTheme } from './constants/themeConstants';
@@ -13,19 +14,21 @@ const App = () => {
 
     return (
       <ConfigProvider theme={currentTheme}>
-        <main style={{ backgroundColor: currentTheme.token.colorBgBase, color: currentTheme.token.colorTextBase, minHeight: '100vh' }}>
-          <AdminLayout />
-        </main>
+        <AdminLayout pageTitle={'Dashboard'}>
+          <p>Hola Amigo</p>
+        </AdminLayout >
       </ConfigProvider>
     );
   };
 
   return (
-    <ScreenSizeProvider>
-      <ThemeProvider>
-        <AppContent />
-      </ThemeProvider>
-    </ScreenSizeProvider>
+    <Router>
+      <ScreenSizeProvider>
+        <ThemeProvider>
+          <AppContent />
+        </ThemeProvider>
+      </ScreenSizeProvider>
+    </Router>
   );
 };
 

@@ -5,7 +5,7 @@ import { Flex, Layout } from 'antd'
 
 
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = ({ children, pageTitle}) => {
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
@@ -13,8 +13,8 @@ const AdminLayout = ({ children }) => {
     return (
         <Flex gap='small' align='start' justify='between'>
             <Sidebar sidebarCollapsed={collapsed} />
-            <Layout className='layout' style={{ marginLeft: collapsed ? -170 : 0, transition: 'margin-left .25s ease-in-out' }}>
-                <TopNav toggleSidebar={toggleCollapsed} sidebarCollapsed={collapsed} />
+            <Layout className='admin-layout' style={{ marginLeft: collapsed ? -160 : -10, transition: 'margin-left .25s ease-in-out' }}>
+                <TopNav toggleSidebar={toggleCollapsed} sidebarCollapsed={collapsed} pageTitle={pageTitle} />
                 {children}
             </Layout>
         </Flex>

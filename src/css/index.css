@@ -40,6 +40,11 @@
   --in-disabled-color: #f8f9fa;
 }
 
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
 
 /* -------- FONT STYLES --------- */
 
@@ -153,12 +158,17 @@ button {
 
 
 /* -------------------------------------------------------------------- */
-/* -------------------------- TOP NAV STYLES --------------------------- */
+/* -------------------------- TOP/SIDE NAV STYLES --------------------------- */
 /* -------------------------------------------------------------------- */
 
 .nav-container {
-  padding: 16px;
+  /* padding: 16px; */
   width: 100%;
+  background-color: transparent;
+  position: sticky;
+  top: 20px;
+  right: 0;
+  z-index: 90;
 }
 
 .topnav {
@@ -168,36 +178,49 @@ button {
   flex-direction: row;
   align-items: center;
   flex-grow: 1;
-  justify-content: start;
+  justify-content: space-between;
   gap: 16px;
   min-height: 64px;
   font-family: 'Funnel Sans', sans-serif;
   border-radius: 8px;
 }
 
-[data-theme='light'] .topnav {
-  box-shadow: 0px 3px 30px -5px rgba(63, 81, 181, 0.61);
-}
-
-[data-theme='dark'] .topnav {
-  box-shadow: 0px 3px 30px -5px rgba(141, 150, 194, 0.61);
-}
-
-.layout {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-
 .sidebar-container {
-  padding: 10px;
-  min-height: 100vh;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  /* border: 1px solid red; */
+  padding: 16px;
+  position: relative !important;
+  z-index: 90;
 }
 
 .sidebar {
-  /* border-radius: 8px; */
-  box-shadow: 0px 3px 30px -5px rgba(141, 150, 194, 0.61);
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  min-height: calc(100vh - 40px);
+  max-height: calc(100vh -40px);
+  border-radius: 10px;
+  padding: 8px 0;
+  position: sticky;
+  top: 8px;
+  left: 8;
+  z-index: 90;
+  overflow-y: auto;
+}
+
+.sidebar {
+  color: var(--text-color);
+}
+
+[data-theme='light'] .topnav,
+[data-theme='light'] .sidebar {
+  box-shadow: 0px 0px 10px -2px rgba(63, 81, 181, 0.61) !important;
+}
+
+[data-theme='dark'] .topnav,
+[data-theme='dark'] .sidebar {
+  box-shadow: 0px 0px 10px -5px rgba(141, 150, 194, 0.61) !important;
+}
+
+.admin-layout {
+  padding: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

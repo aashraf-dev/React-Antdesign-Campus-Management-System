@@ -1,0 +1,96 @@
+/* light theme colors */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --success-color: #2c6e49;
+  --in-success-color: #f8f9fa;
+  --danger-color: #ef233c;
+  --in-danger-color: #f8f9fa;
+  --warning-color: #ffc107;
+  --in-warning-color: #f8f9fa;
+  --primary-color: #3f51b5;
+  --in-primary-color: #f8f9fa;
+  --disabled-color: #9e9e9e;
+  --in-disabled-color: #212529;
+}
+
+/* dark theme colors */
+[data-theme="dark"] {
+  --bg-color: #0d1321;
+  --text-color: #f8f9fa;
+  --success-color: #2c6e49;
+  --in-success-color: #f8f9fa;
+  --danger-color: #ef233c;
+  --in-danger-color: #f8f9fa;
+  --warning-color: #ffc107;
+  --in-warning-color: #f8f9fa;
+  --primary-color: #3f51b5;
+  --in-primary-color: #f8f9fa;
+  --disabled-color: #9e9e9e;
+  --in-disabled-color: #f8f9fa;
+}
+
+/* MENU AND DROP DOWN STYLING */
+.ant-menu-item {
+  color: var(--text-color) !important;
+}
+
+.ant-menu-item-active,
+.ant-menu-item-selected {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* General Sidebar Menu Item Styling */
+.ant-menu-submenu-title {
+  color: var(--text-color) !important;
+  background-color: transparent !important;
+  /* Ensure the background matches the theme */
+}
+
+/* Sidebar Hover Effects */
+.ant-menu-item:hover,
+.ant-menu-submenu-title:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--in-primary-color) !important;
+}
+
+/* Active and Selected States */
+.ant-menu-item-active,
+.ant-menu-item-selected,
+.ant-menu-submenu-title-active {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.ant-menu-sub {
+  background-color: var(--bg-color) !important;
+  border: none !important;
+}
+
+[data-theme="light"] .ant-menu-sub {
+  box-shadow: 0px 0px 10px -2px rgba(63, 81, 181, 0.61) !important;
+}
+
+[data-theme="dark"] .ant-menu-sub {
+  box-shadow: 0px 0px 10px -5px rgba(141, 150, 194, 0.61) !important;
+}
+
+/* General Tooltip Container Styling */
+.ant-tooltip-content {
+  background-color: var(--primary-color) !important;
+  /* Tooltip background matches theme */
+  color: var(--in-primary-color) !important;
+  z-index: 100;
+  border-radius: 10px;
+  font-size: 12px;
+  /* Text color matches theme */
+}
+
+/* Tooltip Inner Styling */
+.ant-tooltip-inner {
+  background-color: var(--primary-color) !important;
+  z-index: 100;
+  /* Match the background */
+  color: var(--in-primary-color) !important;
+}
